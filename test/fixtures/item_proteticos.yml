@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  protetico: 
+  valor: 9.99
+  descricao: MyString
+
+two:
+  protetico: 
+  valor: 9.99
+  descricao: MyString

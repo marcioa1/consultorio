@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  paciente: 
+  data: 2010-11-15
+  vencimento_primeira_parcela: 2010-11-15
+  valor: 9.99
+  numero_parcelas: 1
+  valor_parcela: 9.99
+
+two:
+  paciente: 
+  data: 2010-11-15
+  vencimento_primeira_parcela: 2010-11-15
+  valor: 9.99
+  numero_parcelas: 1
+  valor_parcela: 9.99
