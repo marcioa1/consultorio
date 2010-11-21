@@ -1,10 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  protetico: 
-  tratamento: 
-  item_protetico: 
-  valor: 9.99
+  prosthetic: 
+  treatment: 
+  item_prosthetic: 
+  price: 9.99
   data: 2010-11-15
   entrega_prevista: 2010-11-15
   data_devolucao: 2010-11-15
@@ -15,10 +15,10 @@ one:
   observacao: MyString
 
 two:
-  protetico: 
-  tratamento: 
-  item_protetico: 
-  valor: 9.99
+  prosthetic: 
+  treatment: 
+  item_prosthetic: 
+  price: 9.99
   data: 2010-11-15
   entrega_prevista: 2010-11-15
   data_devolucao: 2010-11-15

@@ -12,70 +12,70 @@
 
 ActiveRecord::Schema.define(:version => 20101115182202) do
 
-  create_table "debitos", :force => true do |t|
-    t.integer  "paciente_id"
-    t.string   "descricao"
-    t.decimal  "valor",         :precision => 8, :scale => 2
+  create_table "debits", :force => true do |t|
+    t.integer  "patient_id"
+    t.string   "description"
+    t.decimal  "price",         :precision => 8, :scale => 2
     t.date     "data"
-    t.integer  "tratamento_id"
-    t.integer  "orcamento_id"
+    t.integer  "treatment_id"
+    t.integer  "budget_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "item_proteticos", :force => true do |t|
-    t.integer  "protetico_id"
-    t.decimal  "valor",        :precision => 8, :scale => 2
-    t.string   "descricao"
+  create_table "item_prosthetics", :force => true do |t|
+    t.integer  "prosthetic_id"
+    t.decimal  "price",        :precision => 8, :scale => 2
+    t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "item_tabelas", :force => true do |t|
-    t.string   "nome"
+  create_table "table_items", :force => true do |t|
+    t.string   "name"
     t.integer  "tabela_id"
-    t.decimal  "valor",      :precision => 8, :scale => 2
+    t.decimal  "price",      :precision => 8, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "orcamentos", :force => true do |t|
-    t.integer  "paciente_id"
+  create_table "budgets", :force => true do |t|
+    t.integer  "patient_id"
     t.date     "data"
     t.date     "vencimento_primeira_parcela"
-    t.decimal  "valor",                       :precision => 8, :scale => 2
-    t.integer  "numero_parcelas"
-    t.decimal  "valor_parcela",               :precision => 8, :scale => 2
+    t.decimal  "price",                       :precision => 8, :scale => 2
+    t.integer  "number_of_parcels"
+    t.decimal  "price_parcela",               :precision => 8, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "pacientes", :force => true do |t|
-    t.string   "nome"
-    t.string   "telefone"
+  create_table "patients", :force => true do |t|
+    t.string   "name"
+    t.string   "phone_number"
     t.integer  "tabela_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "proteticos", :force => true do |t|
-    t.string   "nome"
-    t.string   "telefone"
+  create_table "prosthetics", :force => true do |t|
+    t.string   "name"
+    t.string   "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "tabelas", :force => true do |t|
-    t.string   "nome"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "trabalho_proteticos", :force => true do |t|
-    t.integer  "protetico_id"
-    t.integer  "tratamento_id"
-    t.integer  "item_protetico_id"
-    t.decimal  "valor",                             :precision => 8, :scale => 2
+  create_table "trabalho_prosthetics", :force => true do |t|
+    t.integer  "prosthetic_id"
+    t.integer  "treatment_id"
+    t.integer  "item_prosthetic_id"
+    t.decimal  "price",                             :precision => 8, :scale => 2
     t.date     "data"
     t.date     "entrega_prevista"
     t.date     "data_devolucao"
@@ -88,16 +88,16 @@ ActiveRecord::Schema.define(:version => 20101115182202) do
     t.datetime "updated_at"
   end
 
-  create_table "tratamentos", :force => true do |t|
+  create_table "treatments", :force => true do |t|
     t.date     "data"
-    t.integer  "paciente_id"
-    t.string   "descricao"
+    t.integer  "patient_id"
+    t.string   "description"
     t.string   "dente"
-    t.integer  "item_tabela_id"
-    t.decimal  "valor",          :precision => 8, :scale => 2
+    t.integer  "table_item_id"
+    t.decimal  "price",          :precision => 8, :scale => 2
     t.decimal  "custo",          :precision => 8, :scale => 2
     t.string   "face"
-    t.integer  "orcamento_id"
+    t.integer  "budget_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

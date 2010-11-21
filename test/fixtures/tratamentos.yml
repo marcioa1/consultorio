@@ -2,20 +2,20 @@
 
 one:
   data: 2010-11-15
-  paciente: 
-  descricao: MyString
+  patient: 
+  description: MyString
   dente: MyString
-  item_tabela: 
-  valor: 9.99
+  table_item: 
+  price: 9.99
   custo: 9.99
   face: MyString
 
 two:
   data: 2010-11-15
-  paciente: 
-  descricao: MyString
+  patient: 
+  description: MyString
   dente: MyString
-  item_tabela: 
-  valor: 9.99
+  table_item: 
+  price: 9.99
   custo: 9.99
   face: MyString

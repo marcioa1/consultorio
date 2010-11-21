@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  nome: MyString
+  name: MyString
   tabela: 
-  valor: 9.99
+  price: 9.99
 
 two:
-  nome: MyString
+  name: MyString
   tabela: 
-  valor: 9.99
+  price: 9.99

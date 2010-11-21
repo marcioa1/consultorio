@@ -2,14 +2,14 @@
 
 one:
   data: 2010-11-15
-  valor: 9.99
-  paciente: 
+  price: 9.99
+  patient: 
   forma: 
-  cheque: 
+  heck: 
 
 two:
   data: 2010-11-15
-  valor: 9.99
-  paciente: 
+  price: 9.99
+  patient: 
   forma: 
-  cheque: 
+  heck: 

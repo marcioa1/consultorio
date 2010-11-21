@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  nome: MyString
-  telefone: MyString
+  name: MyString
+  phone_number: MyString
   tabela: 
 
 two:
-  nome: MyString
-  telefone: MyString
+  name: MyString
+  phone_number: MyString
   tabela: 

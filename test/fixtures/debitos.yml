@@ -1,17 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  paciente: 
-  descricao: MyString
-  valor: 9.99
+  patient: 
+  description: MyString
+  price: 9.99
   data: 2010-11-15
-  tratamento: 
-  orcamento: 
+  treatment: 
+  budget: 
 
 two:
-  paciente: 
-  descricao: MyString
-  valor: 9.99
+  patient: 
+  description: MyString
+  price: 9.99
   data: 2010-11-15
-  tratamento: 
-  orcamento: 
+  treatment: 
+  budget: 

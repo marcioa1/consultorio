@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  protetico: 
-  valor: 9.99
-  descricao: MyString
+  prosthetic: 
+  price: 9.99
+  description: MyString
 
 two:
-  protetico: 
-  valor: 9.99
-  descricao: MyString
+  prosthetic: 
+  price: 9.99
+  description: MyString

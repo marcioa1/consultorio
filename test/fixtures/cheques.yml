@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  recebimento: 
-  valor: 9.99
-  banco: 
+  receipt: 
+  price: 9.99
+  bank: 
   numero: MyString
   bom_para: 2010-11-15
   data_devolucao: 2010-11-15
@@ -12,9 +12,9 @@ one:
   observacao: MyString
 
 two:
-  recebimento: 
-  valor: 9.99
-  banco: 
+  receipt: 
+  price: 9.99
+  bank: 
   numero: MyString
   bom_para: 2010-11-15
   data_devolucao: 2010-11-15
