@@ -2,6 +2,8 @@ Consultorio::Application.routes.draw do
   resources :testes
   resources :form_of_receipts
 
+  root :to => "home#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
