@@ -1,4 +1,10 @@
 Consultorio::Application.routes.draw do
+  devise_for :assistents
+
+  devise_for :patients
+
+  devise_for :owners
+
   resources :testes
   resources :form_of_receipts
 

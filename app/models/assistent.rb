@@ -1,4 +1,4 @@
-class Patient < ActiveRecord::Base
+class Assistent < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :lockable, :registerable and :timeoutable
   devise  :database_authenticatable, :recoverable, :rememberable,
@@ -6,10 +6,4 @@ class Patient < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-
-
-  belongs_to :table_price
-  has_many   :treatments
-  has_many   :debits
-  has_many   :receipts
 end
