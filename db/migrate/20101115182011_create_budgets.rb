@@ -1,4 +1,4 @@
-class Createbudgets < ActiveRecord::Migration
+class CreateBudgets < ActiveRecord::Migration
   def self.up
     create_table :budgets do |t|
       t.references :patient
