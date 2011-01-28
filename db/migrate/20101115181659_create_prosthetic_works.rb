@@ -1,6 +1,6 @@
 class CreateProstheticWorks < ActiveRecord::Migration
   def self.up
-    create_table :trabalho_prosthetics do |t|
+    create_table :prosthetic_works do |t|
       t.references :prosthetic
       t.references :treatment
       t.references :prosthetic_item
@@ -10,7 +10,7 @@ class CreateProstheticWorks < ActiveRecord::Migration
       t.date       :devoluction_date
       t.date       :repeat_date
       t.date       :expected_repeat_delivery_date
-      t.date       :date_devolucao_repeticao
+      t.date       :repeat_devolution_date
       t.string     :colour
       t.string     :note
 
@@ -19,6 +19,6 @@ class CreateProstheticWorks < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :trabalho_prosthetics
+    drop_table :prosthetic_works
   end
 end
