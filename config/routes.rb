@@ -1,4 +1,14 @@
 Consultorio::Application.routes.draw do
+  # get "table_price_items/index"
+  # 
+  #   get "table_price_items/new"
+  # 
+  #   get "table_price_items/create"
+  # 
+  #   get "table_price_items/edit"
+  # 
+  #   get "table_price_items/update"
+
   devise_for :assistents
 
   devise_for :patients
@@ -7,6 +17,8 @@ Consultorio::Application.routes.draw do
 
   resources :testes
   resources :form_of_receipts
+  resources :table_prices
+  resources :table_price_items
 
   root :to => "home#index"
 

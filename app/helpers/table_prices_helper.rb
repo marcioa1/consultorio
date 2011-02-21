@@ -1,0 +1,2 @@
+module TablePricesHelper
+end

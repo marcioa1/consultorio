@@ -2,6 +2,7 @@ class CreateTablePrices < ActiveRecord::Migration
   def self.up
     create_table :table_prices do |t|
       t.string      :name
+      t.boolean     :active, :default => true
       t.references  :owner
       t.timestamps
     end

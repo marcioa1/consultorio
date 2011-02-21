@@ -1,0 +1,16 @@
+%p
+  Tabela <%= @table_price.name %>
+
+%table
+  %tr
+    %th Codigo
+    %th Descrição
+    %th Valor
+    %th Ativo
+  - @table_price.table_price_items.each do |item|
+    %tr
+      %td= item.code
+      %td= item.name  
+      %td= item.value
+      %td= item.active
+= link_to 'new', new_table_price_item_path(:table_price_id => @table_price)

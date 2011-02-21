@@ -1,0 +1,14 @@
+Tabela de preços
+%table
+  %tr
+    %th Nome
+    %th Ativa
+    %th &nbsp;
+    %th &nbsp;
+  - @table_price.each do |tp|
+    %tr
+      %td= tp.name
+      %td= tp.active
+      %td= link_to 'edit', edit_table_price_path(tp)
+      %td= link_to 'items', table_price_items_path(:table_price_id => tp.id)
+= link_to 'new', new_table_price_path
