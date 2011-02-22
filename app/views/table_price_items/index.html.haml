@@ -1,5 +1,15 @@
 %p
   Tabela <%= @table_price.name %>
+= @table_price_item.code
+
+- simple_form_for @table_price_item do |f|
+  = hidden_field_tag :id
+  = f.input :id
+  = f.input :code
+  = f.input :name
+  = f.input :price
+  = f.input :active
+  = button_to_function 'save', 'save();'
 
 %table
   %tr
@@ -14,3 +24,11 @@
       %td= item.value
       %td= item.active
 = link_to 'new', new_table_price_item_path(:table_price_id => @table_price)
+:javascript
+  function save(){
+    if ($("#table_price_item_id").html()== ''){
+      alert("novo");
+    }else {
+      alert("edit");
+    }
+  }

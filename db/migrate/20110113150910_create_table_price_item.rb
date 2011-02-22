@@ -1,6 +1,7 @@
 class CreateTablePriceItem < ActiveRecord::Migration
   def self.up
     create_table :table_price_items do |t|
+      t.string     :code
       t.string     :name
       t.references :table_price
       t.decimal    :price, :precision => 8, :scale => 2
