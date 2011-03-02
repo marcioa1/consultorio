@@ -1,34 +1,105 @@
 %p
-  Tabela <%= @table_price.name %>
+  Tabela : 
+  = @table_price.name
 = @table_price_item.code
 
 - simple_form_for @table_price_item do |f|
-  = hidden_field_tag :id
-  = f.input :id
+  = hidden_field_tag :table_price_id, @table_price.id
+  = hidden_field_tag :table_price_item_id
   = f.input :code
   = f.input :name
   = f.input :price
   = f.input :active
-  = button_to_function 'save', 'save();'
+  = button_to_function 'save', 'save()'
 
 %table
-  %tr
-    %th Codigo
-    %th Descrição
-    %th Valor
-    %th Ativo
-  - @table_price.table_price_items.each do |item|
+  %thead
     %tr
-      %td= item.code
-      %td= item.name  
-      %td= item.value
-      %td= item.active
-= link_to 'new', new_table_price_item_path(:table_price_id => @table_price)
+      %th Codigo
+      %th Descrição
+      %th Valor
+      %th Ativo
+      %th &nbsp;
+      %th &nbsp;
+  - @table_price.table_price_items.each do |item|
+    %tr{:id=>'tr_' + item.id.to_s}
+      %td{:id=>'td_0'}= item.code
+      %td{:id=>'td_1'}= item.name  
+      %td{:id=>'td_2'}= item.price
+      %td{:id=>'td_3'}= item.active
+      %td= link_to_function 'alterar', "load_item(#{item.id})"
+      %td= link_to_function 'excluir', "delete_item(#{item.id})"
+
+= link_to_function 'new', 'new_table_price_item()'
 :javascript
   function save(){
-    if ($("#table_price_item_id").html()== ''){
-      alert("novo");
+    if ($("#table_price_item_id").val() == 0){
+      $.ajax({
+        url: '/table_price_items',
+        type: 'POST',
+        data: {table_price_id: $("#table_price_id").val(),
+               code: $("#table_price_item_code").val(),
+               name: $("#table_price_item_name").val(),
+               price: $("#table_price_item_price").val(),
+               active: $("#table_price_item.active").val()
+              },
+        success: function(data){
+          $("tbody").after(data);
+          clear_form();
+        }
+      });
     }else {
-      alert("edit");
+      $.ajax({
+        url: '/table_price_items/' + $("#table_price_item_id").val(),
+        type: 'PUT',
+        data: {table_price_id: $("#table_price_id").val(),
+               code: $("#table_price_item_code").val(),
+               name: $("#table_price_item_name").val(),
+               price: $("#table_price_item_price").val(),
+               active: $("#table_price_item.active").attr("checked")
+              },
+        success: function(data){
+          $("#tr_" + $("#table_price_item_id").val()).replaceWith(data);
+          clear_form();
+        }
+      });
     }
   }
+  
+  function clear_form(){
+    $("#table_price_item_id").val('');
+    $("#table_price_item_code").val('');
+    $("#table_price_item_name").val('');
+    $("#table_price_item_price").val('');
+    $("#table_price_item_active").attr('checked', 'checked');
+    $("#table_price_item_code").focus();
+  }
+  
+  function load_item(item_id){
+    $("#table_price_item_id").val(item_id);
+    $("#table_price_item_code").val($("#tr_" + item_id + " #td_0").html());
+    $("#table_price_item_name").val($("#tr_" + item_id + " #td_1").html());
+    $("#table_price_item_price").val($("#tr_" + item_id + " #td_2").html());
+    if ($("#tr_" + item_id + " #td_3").html()=='true'){
+      $("#table_price_item_active").attr("checked", "checked");
+    }else{
+      $("#table_price_item_active").attr("checked", "false");
+    }
+  }
+  
+  function new_table_price_item(){
+    clear_form();
+  }
+  
+  function delete_item(item_id){
+  $.ajax({
+        url: '/table_price_items/' + item_id ,
+        type: 'DELETE',
+        success: function(data){
+          $("#tr_"+item_id).remove();
+          alert("item excluido");
+          clear_form();
+        }
+      });
+  }
+  

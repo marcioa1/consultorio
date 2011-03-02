@@ -1,0 +1,7 @@
+%tr{:id=>'tr_' + item.id.to_s}
+  %td= item.code
+  %td= item.name  
+  %td= item.price
+  %td= item.active
+  %td= link_to_function 'alterar', "load_item(#{item.id})"
+  %td= link_to_function 'excluir', "delete_item(#{item.id})"

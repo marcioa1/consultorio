@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>naem</th>
     <th></th>
     <th></th>
     <th></th>
@@ -9,6 +10,7 @@
 
 <% @testes.each do |testis| %>
   <tr>
+    <td><%= testis.name %></td>
     <td><%= link_to 'Show', testis %></td>
     <td><%= link_to 'Edit', edit_testis_path(testis) %></td>
     <td><%= link_to 'Destroy', testis, :confirm => 'Are you sure?', :method => :delete %></td>
