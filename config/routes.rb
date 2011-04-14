@@ -1,4 +1,14 @@
 Consultorio::Application.routes.draw do
+  # get "patients/new"
+  # 
+  #   get "patients/create"
+  # 
+  #   get "patients/edit"
+  # 
+  #   get "patients/update"
+  # 
+  #   get "patients/destroy"
+  
   # get "table_price_items/index"
   # 
   #   get "table_price_items/new"
@@ -17,6 +27,7 @@ Consultorio::Application.routes.draw do
 
   resources :testes
   resources :form_of_receipts
+  resources :patients
   resources :table_prices
   resources :table_price_items
 
