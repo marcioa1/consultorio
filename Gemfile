@@ -7,6 +7,8 @@ gem 'devise'
 gem 'cancan'
 gem 'simple_form'
 
+gem 'RedCloth', '>= 4.1.1'  # to generate guides
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

@@ -25,6 +25,10 @@ class PatientsController < ApplicationController
   def destroy
   end
   
+  def search
+    
+  end
+  
   protected
   
   def retrieve_table_prices
