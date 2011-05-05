@@ -1,6 +1,6 @@
 class CreateChecks < ActiveRecord::Migration
   def self.up
-    create_table :hecks do |t|
+    create_table :checks do |t|
       t.references :receipt
       t.decimal    :value, :precision=>8, :decimal=>2
       t.references :bank
@@ -16,6 +16,6 @@ class CreateChecks < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :hecks
+    drop_table :checks
   end
 end

@@ -2,22 +2,20 @@
 
 one:
   receipt: 
-  price: 9.99
+  value: 9.99
   bank: 
-  numero: MyString
-  bom_para: 2010-11-15
-  data_devolucao: 2010-11-15
-  motivo_devolucao: MyString
-  data_reapresentacao: 2010-11-15
-  observacao: MyString
+  number: MyString
+  date_for_deposit: 2010-11-15
+  devolution_reason: MyString
+  return_date: 2010-11-15
+  note: MyString
 
 two:
   receipt: 
-  price: 9.99
+  value: 9.99
   bank: 
-  numero: MyString
-  bom_para: 2010-11-15
-  data_devolucao: 2010-11-15
-  motivo_devolucao: MyString
-  data_reapresentacao: 2010-11-15
-  observacao: MyString
+  number: MyString
+  date_for_deposit: 2010-11-15
+  devolution_reason: MyString
+  return_date: 2010-11-15
+  note: MyString
