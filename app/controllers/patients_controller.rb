@@ -29,6 +29,10 @@ class PatientsController < ApplicationController
     
   end
   
+  def retrieve_names
+    Patient.name_with(params[:initials])
+  end
+  
   protected
   
   def retrieve_table_prices

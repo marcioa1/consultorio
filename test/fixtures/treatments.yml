@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  data: 2010-11-15
+  patient: 
+  description: MyString
+  dente: MyString
+  table_item: 
+  price: 9.99
+  custo: 9.99
+  face: MyString
+
+two:
+  data: 2010-11-15
+  patient: 
+  description: MyString
+  dente: MyString
+  table_item: 
+  price: 9.99
+  custo: 9.99
+  face: MyString

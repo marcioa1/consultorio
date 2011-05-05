@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+marcio:
+  name: Marcio Migueis
+  phone_number: 8888-3399
+  table_price: main
+
+ana:
+  name: Ana Paula
+  phone_number: 3344-5678
+  table_price: main 

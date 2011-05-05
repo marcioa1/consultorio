@@ -27,8 +27,9 @@ Consultorio::Application.routes.draw do
 
   resources :testes
   resources :form_of_receipts
-  resources :patients
   get "patients/search"
+  get "patients/retrieve_names"
+  resources :patients
   resources :table_prices
   resources :table_price_items
 

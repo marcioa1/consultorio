@@ -1,0 +1,18 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  patient: marcio
+  date: 2010-11-15
+  first_parcel_expiration: 2010-11-15
+  price: 9.99
+  number_of_parcels: 1
+  parcel_value: 9.99
+
+two: 
+  patient: ana
+  date: 2010-11-15
+  first_parcel_expiration: 2010-11-15
+  price: 9.99
+  number_of_parcels: 1
+  parcel_value: 9.99
+
